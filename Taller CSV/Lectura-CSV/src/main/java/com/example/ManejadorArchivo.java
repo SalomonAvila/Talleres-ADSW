@@ -9,8 +9,8 @@ public class ManejadorArchivo {
         String linea = "";
         try {
             BufferedReader reader = new BufferedReader(new FileReader(archivo));
-            String[] formato = reader.readLine().split(",");
             /*
+            String[] formato = reader.readLine().split(",");   
             System.out.println("El formato del archivo es: ");
             for(String campo : formato){
                 System.out.print(campo + " | ");
@@ -32,8 +32,8 @@ public class ManejadorArchivo {
         String linea = "";
         try {
             BufferedReader reader = new BufferedReader(new FileReader(archivo));
-            String[] formato = reader.readLine().split(",");
             /*
+            String[] formato = reader.readLine().split(",");
             System.out.println("El formato del archivo es: ");
             for(String campo : formato){
                 System.out.print(campo + " | ");
