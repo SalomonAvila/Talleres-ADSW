@@ -59,12 +59,6 @@ public class RestauranteController {
                 opcion = -1;
             }
         }
-        System.out.println("----- DEBUG ANTES DE ESCRIBIR -----");
-        System.out.println("Platos CSV: " + restauranteCSV.getPlatos().size());
-        restauranteCSV.getPlatos().forEach(p ->
-                System.out.println(p.getNombre() + " ventas=" + p.getVentas() + " ganancia=" + p.calcularGanancia())
-        );
-        System.out.println("----------------------------------");
         ManejadorArchivo.escribirVentasCSV(restauranteCSV.getPlatos(),"src/main/resources/resultados.csv");
         ManejadorArchivo.escribirVentasJSON(restauranteJSON.getPlatos(),"src/main/resources/resultados.json");
     }
