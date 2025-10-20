@@ -6,7 +6,7 @@ public class ManejadorArchivo {
 
     public static ArrayList<Ingrediente> leerArchivoIngredientes(String archivo) throws IOException {
         ArrayList<Ingrediente> ingredientes = new ArrayList<>();
-        String linea = "";
+        String linea;
         try {
             BufferedReader reader = new BufferedReader(new FileReader(archivo));
             /*
@@ -29,7 +29,7 @@ public class ManejadorArchivo {
 
     public static ArrayList<Plato> leerArchivoPlatos(String archivo, ArrayList<Ingrediente> ingredientes) throws IOException {
         ArrayList<Plato> platos = new ArrayList<>();
-        String linea = "";
+        String linea;
         try {
             BufferedReader reader = new BufferedReader(new FileReader(archivo));
             /*
