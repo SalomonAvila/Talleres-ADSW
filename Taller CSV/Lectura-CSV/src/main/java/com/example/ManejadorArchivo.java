@@ -22,12 +22,12 @@ public class ManejadorArchivo {
                 ingredientes.add(ingrediente);
             }
         } catch (Exception e) {
-
+            throw new  IOException();
         }
         return ingredientes;
     }
 
-    public static ArrayList<Plato> leerArchivoPlatos(String archivo, ArrayList<Ingrediente> ingredientes) throws Exception {
+    public static ArrayList<Plato> leerArchivoPlatos(String archivo, ArrayList<Ingrediente> ingredientes) throws IOException {
         ArrayList<Plato> platos = new ArrayList<>();
         String linea = "";
         try {
@@ -56,12 +56,14 @@ public class ManejadorArchivo {
                         }
                     }
                 }
-                if((cantidades.isEmpty()) || (cantidades.size() != ingredientesPlato.size()) ){}
-                platos.add(new Plato(tokens[0],ingredientesPlato,cantidades));
+                if((cantidades.isEmpty()) || (cantidades.size() != ingredientesPlato.size()) ){
+                    platos.add(new Plato(tokens[0],ingredientesPlato,cantidades));
+                }
+
 
             }
         } catch (Exception e) {
-            throw new Exception("Error en el archivo del ingrediente");
+            throw new   IOException();
         }
         return platos;
     }
