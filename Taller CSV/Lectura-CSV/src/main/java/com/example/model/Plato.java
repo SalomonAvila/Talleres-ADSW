@@ -7,6 +7,7 @@ public class Plato {
     private ArrayList<Ingrediente> ingredientes;
     private ArrayList<Integer> cantidades;
     private int precio = 0;
+    private int ventas = 0;
 
     public Plato(String nombre, ArrayList<Ingrediente> ingredientes, ArrayList<Integer> cantidades) {
         setNombre(nombre);
@@ -40,6 +41,8 @@ public class Plato {
         this.precio = precio;
     }
 
+    public void setVentas(int ventas) {this.ventas = ventas;}
+
     public String getNombre() {
         return nombre;
     }
@@ -54,6 +57,16 @@ public class Plato {
 
     public int getPrecio() {
         return precio;
+    }
+
+    public int getVentas() {return ventas;}
+
+    public void aumentarVenta(int cantidad){
+        ventas += cantidad;
+    }
+
+    public int calcularGanancia(){
+        return (precio/2)*ventas;
     }
 
     @Override

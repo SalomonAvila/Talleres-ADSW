@@ -30,4 +30,12 @@ public class Restaurante {
     public void setPlatos(ArrayList<Plato> platos) {
         this.platos = platos;
     }
+
+    public void registrarVenta(String nombre, int cantidad){
+        for(Plato plato : platos){
+            if(plato.getNombre().equalsIgnoreCase(nombre)){
+                plato.aumentarVenta(cantidad);
+            }
+        }
+    }
 }
