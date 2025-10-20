@@ -42,7 +42,7 @@ public class ManejadorArchivo {
             while((linea = reader.readLine()) != null ){
                 String[] tokens = linea.split(",");
                 ArrayList<Ingrediente> ingredientesPlato = new ArrayList<>();
-                ArrayList<Integer> cantidades =  new ArrayList<Integer>();
+                ArrayList<Integer> cantidades =  new ArrayList<>();
                 int cantidadPlatos = Integer.parseInt(tokens[1]);
                 int index = 2;
                 for(int i = 0; i<cantidadPlatos; i++){
