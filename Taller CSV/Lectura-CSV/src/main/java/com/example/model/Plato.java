@@ -1,4 +1,4 @@
-package src.main.java.com.example;
+package src.main.java.com.example.model;
 import java.util.ArrayList;
 
 
@@ -8,7 +8,7 @@ public class Plato {
     private ArrayList<Integer> cantidades;
     private int precio = 0;
 
-    Plato(String nombre, ArrayList<Ingrediente> ingredientes, ArrayList<Integer> cantidades) {
+    public Plato(String nombre, ArrayList<Ingrediente> ingredientes, ArrayList<Integer> cantidades) {
         setNombre(nombre);
         if((ingredientes.size() == cantidades.size()) && (!ingredientes.isEmpty())) {
             setIngredientes(ingredientes);

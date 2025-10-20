@@ -1,4 +1,7 @@
-package src.main.java.com.example;
+package src.main.java.com.example.utils;
+import src.main.java.com.example.model.Ingrediente;
+import src.main.java.com.example.model.Plato;
+
 import java.io.*;
 import java.util.ArrayList;
 
@@ -9,8 +12,8 @@ public class ManejadorArchivo {
         String linea;
         try {
             BufferedReader reader = new BufferedReader(new FileReader(archivo));
+            String[] formato = reader.readLine().split(","); 
             /*
-            String[] formato = reader.readLine().split(",");   
             System.out.println("El formato del archivo es: ");
             for(String campo : formato){
                 System.out.print(campo + " | ");
@@ -32,8 +35,8 @@ public class ManejadorArchivo {
         String linea;
         try {
             BufferedReader reader = new BufferedReader(new FileReader(archivo));
-            /*
             String[] formato = reader.readLine().split(",");
+            /*
             System.out.println("El formato del archivo es: ");
             for(String campo : formato){
                 System.out.print(campo + " | ");
@@ -56,14 +59,14 @@ public class ManejadorArchivo {
                         }
                     }
                 }
-                if((cantidades.isEmpty()) || (cantidades.size() != ingredientesPlato.size()) ){
+                if((!cantidades.isEmpty()) && (cantidades.size() == ingredientesPlato.size()) ){
                     platos.add(new Plato(tokens[0],ingredientesPlato,cantidades));
                 }
 
 
             }
         } catch (Exception e) {
-            throw new   IOException();
+            throw new IOException();
         }
         return platos;
     }
