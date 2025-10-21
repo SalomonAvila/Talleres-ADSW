@@ -12,7 +12,6 @@ public class RestauranteController {
 
 
     public void iniciar() throws Exception {
-        System.out.println("a");
         restauranteCSV = new Restaurante();
         restauranteJSON = new Restaurante();
         Scanner sc = new Scanner(System.in);
@@ -20,17 +19,14 @@ public class RestauranteController {
         System.out.println("Ingrese el nombre del restaurante: ");
         nombre = sc.nextLine();
         restauranteCSV.setNombre(nombre);
-        System.out.println("b");
         try {
             restauranteCSV.setIngredientes(ManejadorArchivo.leerArchivoIngredientesCSV("src/main/resources/ingredientes.csv"));
             restauranteCSV.setPlatos(ManejadorArchivo.leerArchivoPlatosCSV("src/main/resources/platos.csv",restauranteCSV.getIngredientes()));
         }catch (Exception e) {
             throw new Exception("Error leyendo alguno de los archivos CSV");
         }
-        System.out.println("c");
         try{
             restauranteJSON.setIngredientes(ManejadorArchivo.leerArchivoIngredientesJSON("src/main/resources/ingredientes.json"));
-            System.out.println("d");
             restauranteJSON.setPlatos(ManejadorArchivo.leerArchivoPlatosJSON("src/main/resources/platos.json",restauranteJSON.getIngredientes()));
         }catch (Exception e) {
             throw new Exception("Error leyendo alguno de los archivos JSON");
