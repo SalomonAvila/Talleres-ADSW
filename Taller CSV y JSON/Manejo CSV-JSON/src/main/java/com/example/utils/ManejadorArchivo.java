@@ -1,8 +1,8 @@
-package src.main.java.com.example.utils;
+package com.example.utils;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
-import src.main.java.com.example.model.Ingrediente;
-import src.main.java.com.example.model.Plato;
+import com.example.model.Ingrediente;
+import com.example.model.Plato;
 import org.json.simple.JSONArray;
 
 import java.io.*;

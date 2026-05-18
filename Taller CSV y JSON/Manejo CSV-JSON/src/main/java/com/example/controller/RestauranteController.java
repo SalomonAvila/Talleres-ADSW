@@ -1,7 +1,7 @@
-package src.main.java.com.example.controller;
+package com.example.controller;
 
-import src.main.java.com.example.utils.ManejadorArchivo;
-import src.main.java.com.example.model.Restaurante;
+import com.example.utils.ManejadorArchivo;
+import com.example.model.Restaurante;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package src.main.java.com.example.model;
+package com.example.model;
 
 public class Ingrediente {
     private String nombre;

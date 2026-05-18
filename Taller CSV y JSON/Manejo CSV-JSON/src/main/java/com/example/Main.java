@@ -1,6 +1,6 @@
-package src.main.java.com.example;
+package com.example;
 
-import src.main.java.com.example.controller.RestauranteController;
+import com.example.controller.RestauranteController;
 
 public class Main {
     public static void main(String[] args) throws Exception {
