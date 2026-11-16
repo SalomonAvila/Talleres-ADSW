@@ -1,0 +1,22 @@
+[
+  { "nombre": "arroz", "precio": 2000, "medidaPorUnidad": "libra" },
+  { "nombre": "azúcar", "precio": 2500, "medidaPorUnidad": "libra" },
+  { "nombre": "pasta", "precio": 1800, "medidaPorUnidad": "libra" },
+  { "nombre": "aceite vegetal", "precio": 12000, "medidaPorUnidad": "litro" },
+  { "nombre": "sal", "precio": 800, "medidaPorUnidad": "libra" },
+  { "nombre": "harina de trigo", "precio": 2200, "medidaPorUnidad": "libra" },
+  { "nombre": "lentejas", "precio": 3000, "medidaPorUnidad": "libra" },
+  { "nombre": "pollo", "precio": 11000, "medidaPorUnidad": "kilo" },
+  { "nombre": "huevos", "precio": 14000, "medidaPorUnidad": "docena" },
+  { "nombre": "leche", "precio": 4500, "medidaPorUnidad": "litro" },
+  { "nombre": "carne de res", "precio": 18000, "medidaPorUnidad": "kilo" },
+  { "nombre": "tomate", "precio": 3500, "medidaPorUnidad": "kilo" },
+  { "nombre": "cebolla", "precio": 2500, "medidaPorUnidad": "kilo" },
+  { "nombre": "papas", "precio": 2800, "medidaPorUnidad": "kilo" },
+  { "nombre": "pan tajado", "precio": 6000, "medidaPorUnidad": "paquete" },
+  { "nombre": "mantequilla", "precio": 9000, "medidaPorUnidad": "libra" },
+  { "nombre": "queso doble crema", "precio": 14000, "medidaPorUnidad": "libra" },
+  { "nombre": "frijoles", "precio": 3200, "medidaPorUnidad": "libra" },
+  { "nombre": "café molido", "precio": 18000, "medidaPorUnidad": "libra" },
+  { "nombre": "agua embotellada", "precio": 1500, "medidaPorUnidad": "litro" }
+]

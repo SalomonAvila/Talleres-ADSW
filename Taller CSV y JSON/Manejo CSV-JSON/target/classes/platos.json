@@ -1,0 +1,77 @@
+[
+  {
+    "nombre": "arroz con pollo",
+    "ingredientes": ["arroz", "pollo", "sal"],
+    "cantidades": [1, 1, 1]
+  },
+  {
+    "nombre": "pasta con queso",
+    "ingredientes": ["pasta", "queso doble crema", "sal"],
+    "cantidades": [1, 1, 1]
+  },
+  {
+    "nombre": "huevos revueltos con mantequilla",
+    "ingredientes": ["huevos", "mantequilla", "sal"],
+    "cantidades": [1, 1, 1]
+  },
+  {
+    "nombre": "lentejas guisadas",
+    "ingredientes": ["lentejas", "tomate", "cebolla", "sal"],
+    "cantidades": [1, 1, 1, 1]
+  },
+  {
+    "nombre": "café con pan",
+    "ingredientes": ["café molido", "pan tajado"],
+    "cantidades": [1, 1]
+  },
+  {
+    "nombre": "frijoles con arroz",
+    "ingredientes": ["frijoles", "arroz", "sal"],
+    "cantidades": [1, 1, 1]
+  },
+  {
+    "nombre": "puré de papa con mantequilla",
+    "ingredientes": ["papas", "mantequilla", "sal"],
+    "cantidades": [1, 1, 1]
+  },
+  {
+    "nombre": "carne sudada",
+    "ingredientes": ["carne de res", "tomate", "cebolla", "sal"],
+    "cantidades": [1, 1, 1, 1]
+  },
+  {
+    "nombre": "batido de leche con azúcar",
+    "ingredientes": ["leche", "azúcar", "agua embotellada"],
+    "cantidades": [1, 1, 1]
+  },
+  {
+    "nombre": "sandwich de queso",
+    "ingredientes": ["pan tajado", "queso doble crema", "mantequilla"],
+    "cantidades": [1, 1, 1]
+  },
+  {
+    "nombre": "sopa de pollo",
+    "ingredientes": ["pollo", "papas", "tomate", "sal"],
+    "cantidades": [1, 1, 1, 1]
+  },
+  {
+    "nombre": "arepas con mantequilla",
+    "ingredientes": ["harina de trigo", "mantequilla"],
+    "cantidades": [1, 1]
+  },
+  {
+    "nombre": "pasta con carne",
+    "ingredientes": ["pasta", "carne de res", "sal"],
+    "cantidades": [1, 1, 1]
+  },
+  {
+    "nombre": "chocolate con pan",
+    "ingredientes": ["café molido", "pan tajado"],
+    "cantidades": [1, 1]
+  },
+  {
+    "nombre": "arroz con huevos",
+    "ingredientes": ["arroz", "huevos", "sal"],
+    "cantidades": [1, 1, 1]
+  }
+]
