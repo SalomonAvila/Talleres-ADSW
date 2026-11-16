@@ -4,8 +4,8 @@ import java.util.ArrayList;
 
 public class Plato {
     private String nombre;
-    private ArrayList<Ingrediente> ingredientes;
-    private ArrayList<Integer> cantidades;
+    private ArrayList<Ingrediente> ingredientes = new ArrayList<>();
+    private ArrayList<Integer> cantidades = new ArrayList<>();
     private int precio = 0;
     private int ventas = 0;
 
@@ -19,8 +19,8 @@ public class Plato {
     }
 
     private void calcularPrecio() {
-        for(Ingrediente ingrediente : ingredientes) {
-            precio  += ingrediente.getPrecio();
+        for(int i = 0; i < ingredientes.size(); i++) {
+            precio += ingredientes.get(i).getPrecio() * cantidades.get(i);
         }
         precio *= 2;
     }

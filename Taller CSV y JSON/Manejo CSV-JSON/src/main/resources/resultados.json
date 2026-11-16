@@ -1,0 +1,24 @@
+[
+  [
+    { "ventas": 2, "nombre": "arroz con pollo", "ganancia": 27600 },
+    { "ventas": 3, "nombre": "pasta con queso", "ganancia": 49800 },
+    {
+      "ventas": 0,
+      "nombre": "huevos revueltos con mantequilla",
+      "ganancia": 0
+    },
+    { "ventas": 5, "nombre": "lentejas guisadas", "ganancia": 49000 },
+    { "ventas": 0, "nombre": "café con pan", "ganancia": 0 },
+    { "ventas": 7, "nombre": "frijoles con arroz", "ganancia": 42000 },
+    { "ventas": 0, "nombre": "puré de papa con mantequilla", "ganancia": 0 },
+    { "ventas": 9, "nombre": "carne sudada", "ganancia": 223200 },
+    { "ventas": 0, "nombre": "batido de leche con azúcar", "ganancia": 0 },
+    { "ventas": 11, "nombre": "sandwich de queso", "ganancia": 319000 },
+    { "ventas": 0, "nombre": "sopa de pollo", "ganancia": 0 },
+    { "ventas": 0, "nombre": "arepas con mantequilla", "ganancia": 0 },
+    { "ventas": 0, "nombre": "pasta con carne", "ganancia": 0 },
+    { "ventas": 0, "nombre": "chocolate con pan", "ganancia": 0 },
+    { "ventas": 0, "nombre": "arroz con huevos", "ganancia": 0 }
+  ],
+  { "ventasTotales": 37, "gananciasTotales": 710600 }
+]

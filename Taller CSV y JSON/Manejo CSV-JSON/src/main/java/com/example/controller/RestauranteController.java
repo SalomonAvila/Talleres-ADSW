@@ -7,55 +7,39 @@ import java.util.Scanner;
 
 public class RestauranteController {
 
-    private Restaurante restauranteCSV;
-    private Restaurante restauranteJSON;
+    private Restaurante restaurante;
 
 
     public void iniciar() throws Exception {
-        restauranteCSV = new Restaurante();
-        restauranteJSON = new Restaurante();
+        restaurante = new Restaurante();
         Scanner sc = new Scanner(System.in);
         String nombre;
         System.out.println("Ingrese el nombre del restaurante: ");
         nombre = sc.nextLine();
-        restauranteCSV.setNombre(nombre);
-        try {
-            restauranteCSV.setIngredientes(ManejadorArchivo.leerArchivoIngredientesCSV("src/main/resources/ingredientes.csv"));
-            restauranteCSV.setPlatos(ManejadorArchivo.leerArchivoPlatosCSV("src/main/resources/platos.csv",restauranteCSV.getIngredientes()));
-        }catch (Exception e) {
-            throw new Exception("Error leyendo alguno de los archivos CSV");
-        }
+        restaurante.setNombre(nombre);
         try{
-            restauranteJSON.setIngredientes(ManejadorArchivo.leerArchivoIngredientesJSON("src/main/resources/ingredientes.json"));
-            restauranteJSON.setPlatos(ManejadorArchivo.leerArchivoPlatosJSON("src/main/resources/platos.json",restauranteJSON.getIngredientes()));
+            restaurante.setIngredientes(ManejadorArchivo.leerArchivoIngredientesJSON("src/main/resources/ingredientes.json"));
+            restaurante.setPlatos(ManejadorArchivo.leerArchivoPlatosJSON("src/main/resources/platos.json",restaurante.getIngredientes()));
         }catch (Exception e) {
             throw new Exception("Error leyendo alguno de los archivos JSON");
-        }
-        if(restauranteCSV.getIngredientes().size() != restauranteJSON.getIngredientes().size()){
-            throw new Exception("La cantidad de ingredientes es diferente");
-        }
-        if(restauranteCSV.getPlatos().size() != restauranteJSON.getPlatos().size()){
-            throw new Exception("La cantidad de platos es diferente");
         }
         int opcion = 0;
         while(opcion != -1) {
             int i = 0;
-            for (i = 0; i < restauranteJSON.getPlatos().size(); i++) {
-                System.out.println((i + 1) + ". " + restauranteJSON.getPlatos().get(i).getNombre());
+            for (i = 0; i < restaurante.getPlatos().size(); i++) {
+                System.out.println((i + 1) + ". " + restaurante.getPlatos().get(i).getNombre());
             }
             System.out.println((i + 1) + ". Salir");
 
             opcion = sc.nextInt();
-            if (opcion > 0 && opcion <= restauranteJSON.getPlatos().size()) {
+            if (opcion > 0 && opcion <= restaurante.getPlatos().size()) {
                 System.out.println("Cuantas unidades? ");
                 int unidades = sc.nextInt();
-                restauranteJSON.registrarVenta(restauranteJSON.getPlatos().get(opcion - 1).getNombre(), unidades);
-                restauranteCSV.registrarVenta(restauranteCSV.getPlatos().get(opcion - 1).getNombre(), unidades);
+                restaurante.registrarVenta(restaurante.getPlatos().get(opcion - 1).getNombre(), unidades);
             } else {
                 opcion = -1;
             }
         }
-        ManejadorArchivo.escribirVentasCSV(restauranteCSV.getPlatos(),"src/main/resources/resultados.csv");
-        ManejadorArchivo.escribirVentasJSON(restauranteJSON.getPlatos(),"src/main/resources/resultados.json");
+        ManejadorArchivo.escribirVentasJSON(restaurante.getPlatos(),"src/main/resources/resultados.json");
     }
 }
